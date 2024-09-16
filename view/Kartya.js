@@ -2,10 +2,12 @@ export default class Kartya {
   //egyetlen kutya adatainak megjelenítése egy adott helyen
   //adattagok
   #kutyaAdat = {}; // objektum
+  #fociAdat = {};
   #szuloELEM; // html dom elem
   //constructor
   constructor(adat, szuloElem) {
     this.#kutyaAdat = adat;
+    this.#fociAdat = adat;
     this.#szuloELEM = szuloElem;
     this.KutyaKiir();
     
@@ -22,8 +24,7 @@ export default class Kartya {
                     <p class="card-text">${this.#kutyaAdat.kor}</p>
                     <p>${this.#kutyaAdat.nem}</p>
                     <button class="kiv btn btn-success">Kiválaszt</button>
-            </div>
-        
+                </div>
             </div>`);
   }
   gombKattint() {
